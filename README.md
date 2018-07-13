@@ -1,2 +1,2 @@
-# my-Python-study-demo
-学习 Python 过程中所写的小练习
+# my-pystudy
+学习 Python 过程中所写的一些小练习
