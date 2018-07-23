@@ -1,0 +1,8 @@
+参数说明：
+最主要的两个参数是n_estimators和max_features。
+n_estimators：表示森林里树的个数。理论上是越大越好。但是伴随着就是计算时间的增长。但是并不是取得越大就会越好，预测效果最好的将会出现在合理的树个数。
+max_features：随机选择特征集合的子集合，并用来分割节点。子集合的个数越少，方差就会减少的越快，但同时偏差就会增加的越快。根据较好的实践经验。如果是回归问题则：
+max_features＝n_features，如果是分类问题则max_features＝sqrt(n_features)。
+
+如果想获取较好的结果，必须将max_depth＝None,同时min_sample_split=1。
+同时还要记得进行cross_validated（交叉验证），除此之外记得在random forest中，bootstrap=True。但在extra-trees中，bootstrap=False。
